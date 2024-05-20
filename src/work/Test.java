@@ -16,6 +16,6 @@ public class Test extends Application {
     }
     public static void main(String[] args) {
         launch(args);
-        System.out.println("邹育龙好帅！");
+        System.out.println("邹育龙好帅啊！");
     }
 }
