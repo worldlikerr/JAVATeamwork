@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.controller.MainScene">
+   <children>
+      <Button layoutX="140.0" layoutY="188.0" mnemonicParsing="false" onAction="#ToApplyScene" text="我是选手">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="390.0" layoutY="188.0" mnemonicParsing="false" onAction="#ToMarkScene" text="我是评委">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button layoutX="512.0" layoutY="331.0" mnemonicParsing="false" onAction="#GetResult" text="获取结果">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
