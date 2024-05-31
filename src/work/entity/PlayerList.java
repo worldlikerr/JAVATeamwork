@@ -1,6 +1,7 @@
 package work.entity;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Objects;
 import java.util.Random;
 
@@ -72,8 +73,12 @@ public class PlayerList {
     }
 
     //增
-    public void addPlayer(Player player){
-        playerArrayList.add(player);
+    public boolean addPlayer(Player player){
+        if(findPlayer(player.getPlayer_id())==null){
+            playerArrayList.add(player);
+            return true;
+        }
+        return false;
     }
 
     //查
@@ -99,5 +104,38 @@ public class PlayerList {
         for(var v:playerArrayList){
             System.out.println(v.toString());
         }
+    }
+
+    /**
+     * 按照学号排序
+     * @param flag
+     * true为升序
+     * false为降序
+     */
+    public void sortByID(boolean flag){
+        playerArrayList.sort(flag
+                ? Comparator.comparing(Player::getPlayer_id)
+                : Comparator.comparing(Player::getPlayer_id).reversed());
+    }
+
+    //按照学院排序
+    public void sortByCollageName(boolean flag){
+        playerArrayList.sort(flag
+                ? Comparator.comparing(Player::getCollege_name)
+                : Comparator.comparing(Player::getCollege_name).reversed());
+    }
+
+    //按照报名时间排序
+    public void sortByRegistrationTime(boolean flag){
+        playerArrayList.sort(flag
+                ? Comparator.comparing(Player::getRegistration_time)
+                : Comparator.comparing(Player::getRegistration_time).reversed());
+    }
+
+    //按照性别排序
+    public void sortByGender(boolean flag){
+        playerArrayList.sort(flag
+                ? Comparator.comparing(Player::getGender)
+                : Comparator.comparing(Player::getGender).reversed());
     }
 }

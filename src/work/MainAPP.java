@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -25,9 +26,17 @@ public class MainAPP extends Application {
     }
 
     //界面跳转
-    public static void setRoot(String address) throws Exception{
+    public static void setRoot(String address,String title) throws Exception{
         Pane root=FXMLLoader.load(MainAPP.class.getResource(address));
         Scene scene=new Scene(root,600,400);
+        mainStage.setTitle(title);
+        mainStage.setScene(scene);
+        mainStage.show();
+    }
+    public static void setSpecialRoot(String address,String title) throws Exception{
+        SplitPane root=FXMLLoader.load(MainAPP.class.getResource(address));
+        Scene scene=new Scene(root,600,400);
+        mainStage.setTitle(title);
         mainStage.setScene(scene);
         mainStage.show();
     }

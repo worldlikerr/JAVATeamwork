@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.7239304812834223" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.controller.PlayerListScene">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ListView fx:id="textList" layoutX="-2.0" layoutY="-1.0" prefHeight="398.0" prefWidth="439.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ComboBox fx:id="sortChoice" layoutX="6.0" layoutY="27.0" prefWidth="150.0" />
+            <ComboBox fx:id="sortBoolChoice" layoutX="6.0" layoutY="75.0" prefWidth="150.0" />
+            <Label layoutX="6.0" layoutY="6.0" text="选择排序的种类" />
+            <Label layoutX="6.0" layoutY="60.0" text="选择排序的依据" />
+            <Button layoutX="108.0" layoutY="109.0" mnemonicParsing="false" onAction="#confirmForSort" text="确定" />
+            <TextField fx:id="player_id" layoutX="1.0" layoutY="162.0" />
+            <Label layoutX="6.0" layoutY="147.0" text="输入需要删除的学生学号" />
+            <Button layoutX="108.0" layoutY="199.0" mnemonicParsing="false" onAction="#confirmForDelete" text="确定" />
+            <Button layoutX="81.0" layoutY="372.0" mnemonicParsing="false" onAction="#back" text="返回主界面" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

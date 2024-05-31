@@ -14,8 +14,12 @@ public class ProveScene {
 
     //确定
     public void confirm(ActionEvent actionEvent) throws Exception {
-        if (Objects.equals(inputWord.getText(), password))
-            MainAPP.setRoot("view/MarkScene.fxml");
+        if (Objects.equals(inputWord.getText(), password)){
+            switch (MainScene.sceneIndex){
+                case 0->MainAPP.setRoot("view/MarkScene.fxml","评分界面");
+                case 1->MainAPP.setSpecialRoot("view/PlayerListScene.fxml","报名选手名单");
+            }
+        }
         else
             MainAPP.toRemindScene("密码错误");
     }
