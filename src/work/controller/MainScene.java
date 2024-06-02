@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import work.MainAPP;
 
 public class MainScene {
-    //比骚进行阶段
+    //比赛进行阶段
     public static int gameStage;
     //
     public static int sceneIndex;
