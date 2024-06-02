@@ -27,4 +27,8 @@ public class ProveScene {
     public String getPassword() {
         return password;
     }
+
+    public void back(ActionEvent actionEvent) throws Exception {
+        MainAPP.setRoot("view/MainScene.fxml","主界面");
+    }
 }
