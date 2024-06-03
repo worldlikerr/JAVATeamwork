@@ -14,7 +14,7 @@ public class MainScene {
     @FXML
     private void initialize(){
         sceneIndex=0;
-        gameStage=0;
+        gameStage=1;
     }
 
     //前往报名界面

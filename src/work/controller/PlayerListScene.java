@@ -13,8 +13,6 @@ import work.entity.PlayerList;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import static java.lang.StringTemplate.STR;
-
 public class PlayerListScene {
     public ListView<String> textList;
     public ComboBox<String> sortChoice;
@@ -50,14 +48,28 @@ public class PlayerListScene {
 
     //更新列表
     public void update(){
-        ArrayList<String> arrayList=new ArrayList<>();
-        for(var v:playerList.playerArrayList){
-            arrayList.add(STR."\{v.getName()} \{v.getPlayer_id()} \{v.getGender().getGender()} \{v.getCollege_name()} \{v.getBirthday()} \{v.getMusic_name()} \{v.getRegistration_time()}");
+        ArrayList<String> arrayList = new ArrayList<>();
+        String format = "%-10s %-10s %-8s %-20s %-20s %-20s %-20s"; // 根据需要调整每个字段的宽度
+        String s="姓名           学号          性别     生日                       报名时间                学院                        报名曲目";
+        arrayList.add(s);
+        for (var v : playerList.playerArrayList) {
+            String formattedString = String.format(
+                    format,
+                    v.getName(),
+                    v.getPlayer_id(),
+                    v.getGender().getGender(),
+                    v.getBirthday(),
+                    v.getRegistration_time(),
+                    v.getCollege_name(),
+                    v.getMusic_name()
+            );
+            arrayList.add(formattedString);
         }
 
         ObservableList<String> observableList = FXCollections.observableArrayList(arrayList);
         textList.setItems(observableList);
     }
+
 
     //删除对应选手
     public void confirmForDelete(ActionEvent actionEvent) {
