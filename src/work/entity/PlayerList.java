@@ -9,7 +9,7 @@ import java.util.Random;
 public class PlayerList {
     public ArrayList<Player> playerArrayList;
     //限制报名人数
-    private final int PLAYER_NUMBER=12;
+    public final static int PLAYER_NUMBER=11;
     public int getPLAYER_NUMBER() {
         return PLAYER_NUMBER;
     }
@@ -74,7 +74,7 @@ public class PlayerList {
 
     //增
     public boolean addPlayer(Player player){
-        if(findPlayer(player.getPlayer_id())==null){
+        if(findPlayer(player.getPlayer_id())==null&&playerArrayList.size()<PLAYER_NUMBER){
             playerArrayList.add(player);
             return true;
         }
@@ -138,4 +138,5 @@ public class PlayerList {
                 ? Comparator.comparing(Player::getGender)
                 : Comparator.comparing(Player::getGender).reversed());
     }
+
 }

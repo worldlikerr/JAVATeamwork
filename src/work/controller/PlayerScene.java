@@ -38,7 +38,7 @@ public class PlayerScene {
                     Integer.parseInt(day.getText())),
                     music_name.getText(),
                     getTime());
-            MainAPP.toRemindScene(playerList.addPlayer(player)?"报名成功":"您已报名");
+            MainAPP.toRemindScene(playerList.addPlayer(player)?"报名成功":"您已报名或人数已达上限");
         }catch (Exception e){
             MainAPP.toRemindScene("请检查是否有信息未输入");
         }
