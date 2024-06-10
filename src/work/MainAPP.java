@@ -5,9 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+
 //程序入口
 public class MainAPP extends Application {
     public static Stage mainStage;
@@ -59,14 +62,25 @@ public class MainAPP extends Application {
     public static void toRemindScene(String text){
         Stage primaryStage = new Stage();
         Pane root = new Pane();
+        //设置输出信息
         Label label=new Label(text);
         label.setTranslateY(60);
+        label.setTranslateX(50);
         label.setFont(Font.font(20));
-        // 将 TextField 添加到 Pane 中
+        //添加输出信息
         root.getChildren().add(label);
 
+        //设置图片
+        Image image=new Image("work/resource/image/Snipaste_2024-06-10_14-40-54.png");
+        ImageView imageView=new ImageView(image);
+        imageView.setFitHeight(50);
+        imageView.setFitWidth(50);
+        imageView.setY(60);
+        //添加图片
+        root.getChildren().add(imageView);
+
         Scene scene = new Scene(root, 300, 150);
-        primaryStage.setTitle("提示信息");
+        primaryStage.setTitle("错误");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
