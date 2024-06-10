@@ -1,5 +1,7 @@
 package work.entity;
 
+import work.musicPlay.MusicShow;
+
 //选手类，记录选手的基本属性
 public class Player {
     //选手的基本属性
@@ -17,8 +19,12 @@ public class Player {
     private String music_name;
     //报名时间
     private String registration_time;
+    //是否被淘汰
+    private double grade;
+    private MusicShow musicShow;
 
-    public Player(String name, String player_id, Gender gender, String college_name, String birthday, String music_name, String registration_time) {
+    public Player(String name, String player_id, Gender gender, String college_name, String birthday, String music_name, String registration_time)
+    {
         this.name = name;
         this.player_id = player_id;
         this.gender = gender;
@@ -26,14 +32,17 @@ public class Player {
         this.birthday = birthday;
         this.music_name = music_name;
         this.registration_time = registration_time;
+        this.musicShow=new MusicShow(music_name);
     }
-    public Player(){
-        this.name="hangman";
+
+    public Player()
+    {
+        this.name="dream";
         this.player_id="123123";
         this.gender=Gender.M;
         this.college_name="数计学院";
         this.birthday="2001-9-2";
-        this.music_name="Idol";
+        this.music_name="声音.m4a";
         this.registration_time="2024-5-27";
     }
 
@@ -93,8 +102,21 @@ public class Player {
         this.registration_time = registration_time;
     }
 
+    public double getGrade() {
+        return grade;
+    }
+
+    public void setGrade(double grade) {
+        this.grade = grade;
+    }
+
+    public MusicShow getMusicShow() {
+        return musicShow;
+    }
+
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Player{" +
                 "name='" + name + '\'' +
                 ", player_id='" + player_id + '\'' +
@@ -105,4 +127,6 @@ public class Player {
                 ", registration_time='" + registration_time + '\'' +
                 '}';
     }
+
+
 }
