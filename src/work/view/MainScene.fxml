@@ -8,17 +8,17 @@
    <children>
       <Button layoutX="90.0" layoutY="142.0" mnemonicParsing="false" onAction="#ToApplyScene" prefHeight="40.0" prefWidth="114.0" text="我是选手">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font></Button>
       <Button layoutX="390.0" layoutY="142.0" mnemonicParsing="false" onAction="#ToMarkScene" prefHeight="40.0" prefWidth="114.0" text="我是评委">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold Italic" size="20.0" />
          </font></Button>
-      <Button layoutX="506.0" layoutY="311.0" mnemonicParsing="false" onAction="#GetResult" prefHeight="30.0" prefWidth="79.0" text="比赛结果">
+      <Button layoutX="506.0" layoutY="311.0" mnemonicParsing="false" onAction="#GetResult" prefHeight="30.0" prefWidth="79.0" text="比赛结果" textFill="#042dd0">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button layoutX="507.0" layoutY="268.0" mnemonicParsing="false" onAction="#ToPlayerListScene" prefHeight="30.0" prefWidth="79.0" text="选手名单">
+      <Button layoutX="507.0" layoutY="268.0" mnemonicParsing="false" onAction="#ToPlayerListScene" prefHeight="30.0" prefWidth="79.0" text="选手名单" textFill="#128b94">
          <font>
             <Font size="14.0" />
          </font>
