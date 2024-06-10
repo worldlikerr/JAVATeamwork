@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import work.MainAPP;
 import work.entity.PlayerList;
-
+//主界面控制器
 public class MainScene {
     //比赛进行阶段
     public static int gameStage;

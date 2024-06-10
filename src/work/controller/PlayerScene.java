@@ -12,7 +12,7 @@ import work.entity.PlayerList;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
-
+//报名界面控制器
 public class PlayerScene {
     public TextField name;
     public TextField player_id;

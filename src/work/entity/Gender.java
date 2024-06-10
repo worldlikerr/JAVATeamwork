@@ -1,5 +1,5 @@
 package work.entity;
-
+//性别枚举类
 public enum Gender {
     M("男"),
     W("女");

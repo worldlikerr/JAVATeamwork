@@ -5,7 +5,7 @@ import javafx.scene.control.PasswordField;
 import work.MainAPP;
 
 import java.util.Objects;
-
+//验证界面控制器
 public class ProveScene {
     //输入的密码
     public PasswordField inputWord;

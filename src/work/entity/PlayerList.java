@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Objects;
 import java.util.Random;
 
-//选手列表
+//选手集合类
 public class PlayerList {
     public ArrayList<Player> playerArrayList;
     //限制报名人数

@@ -12,7 +12,7 @@ import work.entity.PlayerList;
 
 import java.util.ArrayList;
 import java.util.Objects;
-
+//报名选手名单控制器
 public class PlayerListScene {
     public ListView<String> textList;
     public ComboBox<String> sortChoice;

@@ -8,7 +8,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
+//程序入口
 public class MainAPP extends Application {
     public static Stage mainStage;
     @Override
@@ -25,7 +25,16 @@ public class MainAPP extends Application {
         launch(args);
     }
 
-    //界面跳转
+
+
+    /**
+     *界面跳转
+     * @param address
+     * 控制器地址
+     * @param title
+     * 界面标题
+     * @throws Exception
+     */
     public static void setRoot(String address,String title) throws Exception{
         Pane root=FXMLLoader.load(MainAPP.class.getResource(address));
         Scene scene=new Scene(root,600,400);
@@ -34,6 +43,7 @@ public class MainAPP extends Application {
         mainStage.show();
     }
     public static void setSpecialRoot(String address,String title) throws Exception{
+        //使用SplitPane界面使用该方法
         SplitPane root=FXMLLoader.load(MainAPP.class.getResource(address));
         Scene scene=new Scene(root,600,400);
         mainStage.setTitle(title);
@@ -41,7 +51,11 @@ public class MainAPP extends Application {
         mainStage.show();
     }
 
-    //提示界面
+    /**
+     * 另外弹出的的提示界面
+     * @param text
+     * 弹出界面内显示的文本
+     */
     public static void toRemindScene(String text){
         Stage primaryStage = new Stage();
         Pane root = new Pane();
