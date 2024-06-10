@@ -36,7 +36,7 @@ public class MainScene {
             MainScene.sceneIndex=0;
             MainAPP.setRoot("view/ProveScene.fxml","验证界面");
         }else{
-            MainAPP.toRemindScene("打分结束或未开始");
+            MainAPP.setRoot("view/MarkScene1.fxml","第一轮");
         }
     }
 
