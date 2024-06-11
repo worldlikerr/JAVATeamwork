@@ -39,11 +39,19 @@ public class MarkScene1 implements Initializable
     private static List<Player> outPlayer=new ArrayList<>();
 
 
+    //查看打分细则
+    @FXML
+    public void inquiryRule() throws Exception {
+        MainAPP.setRoot("view/Rule.fxml","比赛规则");
+    }
+
+
+
     //打分
     @FXML
     public void mark()
     {
-        double theGrade=0;
+        List<Integer> theGrade=new ArrayList<>();
         for(int i=1;i<=5;i++)
         {
             String[] temp=switch (i)   //读取五个框内的数据，然后赋值给对应的评委
@@ -59,16 +67,23 @@ public class MarkScene1 implements Initializable
             Judges.getJudgeList().get(i).setFaceGrade(Integer.parseInt(temp[2]));
             switch (i)
             {
-                case 1:Grade1.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade+=Judges.getJudgeList().get(i).getSumGrade(); break;
-                case 2:Grade2.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade+=Judges.getJudgeList().get(i).getSumGrade(); break;
-                case 3:Grade3.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade+=Judges.getJudgeList().get(i).getSumGrade(); break;
-                case 4:Grade4.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade+=Judges.getJudgeList().get(i).getSumGrade(); break;
-                case 5:Grade5.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade+=Judges.getJudgeList().get(i).getSumGrade(); break;
+                case 1:Grade1.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
+                case 2:Grade2.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
+                case 3:Grade3.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
+                case 4:Grade4.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
+                case 5:Grade5.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
             }
         }
-
+        theGrade.sort((a,b)->a-b);
+        //去掉最大值和最小值
+        theGrade.removeFirst();
+        theGrade.removeLast();
         //给选手统计最终成绩
-        PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-1).setGrade(theGrade);
+        double result = 0;
+        for(var v:theGrade){
+            result+=v;
+        }
+        PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-1).setGrade(result);
     }
 
 
