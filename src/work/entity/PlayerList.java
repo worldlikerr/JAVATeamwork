@@ -10,7 +10,7 @@ public class PlayerList
 {
     public ArrayList<Player> playerArrayList;
     //限制报名人数
-    public final static int PLAYER_NUMBER=11;
+    public final static int PLAYER_NUMBER=9;
     public int getPLAYER_NUMBER() {
         return PLAYER_NUMBER;
     }

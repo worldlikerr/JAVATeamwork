@@ -11,6 +11,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 //程序入口
 public class MainAPP extends Application {
     public static Stage mainStage;
@@ -77,7 +79,8 @@ public class MainAPP extends Application {
         imageView.setFitWidth(50);
         imageView.setY(60);
         //添加图片
-        root.getChildren().add(imageView);
+        if (!Objects.equals(text, "报名成功"))
+            root.getChildren().add(imageView);
 
         Scene scene = new Scene(root, 300, 150);
         primaryStage.setTitle("错误");
