@@ -83,7 +83,8 @@ public class MainAPP extends Application {
             root.getChildren().add(imageView);
 
         Scene scene = new Scene(root, 300, 150);
-        primaryStage.setTitle("错误");
+        if (!Objects.equals(text, "报名成功"))
+            primaryStage.setTitle("错误");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
