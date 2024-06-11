@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.controller.MarkScene1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.controller.MarkScene1">
    <children>
       <GridPane gridLinesVisible="true" layoutX="23.0" layoutY="73.0" prefHeight="152.0" prefWidth="231.0">
         <columnConstraints>
@@ -19,14 +18,14 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="116.0" text="选手一" onAction="#theFirst"/>
-            <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="116.0" text="选手二" GridPane.columnIndex="1" onAction="#theSecond"/>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="116.0" text="选手三" GridPane.rowIndex="1" onAction="#theThird"/>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="116.0" text="选手四" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#theFourth"/>
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="116.0" text="选手五" GridPane.rowIndex="2" onAction="#theFifth"/>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="116.0" text="选手六" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#theSixth"/>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="116.0" text="选手七" GridPane.rowIndex="3" onAction="#theSeventh"/>
-            <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="116.0" text="选手八" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#theEighth"/>
+            <Button mnemonicParsing="false" onAction="#theFirst" prefHeight="42.0" prefWidth="116.0" text="选手一" />
+            <Button mnemonicParsing="false" onAction="#theSecond" prefHeight="41.0" prefWidth="116.0" text="选手二" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#theThird" prefHeight="44.0" prefWidth="116.0" text="选手三" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#theFourth" prefHeight="42.0" prefWidth="116.0" text="选手四" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#theFifth" prefHeight="43.0" prefWidth="116.0" text="选手五" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#theSixth" prefHeight="42.0" prefWidth="116.0" text="选手六" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#theSeventh" prefHeight="50.0" prefWidth="116.0" text="选手七" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#theEighth" prefHeight="42.0" prefWidth="116.0" text="选手八" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <Label layoutX="274.0" layoutY="63.0" prefHeight="20.0" prefWidth="48.0" text="评委一：" />
@@ -41,12 +40,12 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <TextField layoutX="320.0" layoutY="61.0" prefHeight="23.0" prefWidth="194.0" fx:id="judgeOne"/>
-      <TextField layoutX="320.0" layoutY="117.0" prefHeight="23.0" prefWidth="194.0" fx:id="judgeTwo"/>
-      <TextField layoutX="320.0" layoutY="171.0" prefHeight="23.0" prefWidth="194.0" fx:id="judgeThree"/>
-      <TextField layoutX="320.0" layoutY="226.0" prefHeight="23.0" prefWidth="194.0" fx:id="judgeFour"/>
-      <TextField layoutX="320.0" layoutY="283.0" prefHeight="23.0" prefWidth="194.0" fx:id="judgeFive"/>
-      <Button layoutX="115.0" layoutY="248.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="48.0" text="打分" textFill="#e20909" onAction="#mark">
+      <TextField fx:id="judgeOne" layoutX="320.0" layoutY="61.0" prefHeight="23.0" prefWidth="194.0" />
+      <TextField fx:id="judgeTwo" layoutX="320.0" layoutY="117.0" prefHeight="23.0" prefWidth="194.0" />
+      <TextField fx:id="judgeThree" layoutX="320.0" layoutY="171.0" prefHeight="23.0" prefWidth="194.0" />
+      <TextField fx:id="judgeFour" layoutX="320.0" layoutY="226.0" prefHeight="23.0" prefWidth="194.0" />
+      <TextField fx:id="judgeFive" layoutX="320.0" layoutY="283.0" prefHeight="23.0" prefWidth="194.0" />
+      <Button layoutX="115.0" layoutY="248.0" mnemonicParsing="false" onAction="#mark" prefHeight="32.0" prefWidth="48.0" text="打分" textFill="#e20909">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
@@ -56,14 +55,19 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField layoutX="533.0" layoutY="61.0" prefHeight="23.0" prefWidth="48.0" fx:id="Grade1"/>
-      <TextField layoutX="534.0" layoutY="116.0" prefHeight="23.0" prefWidth="48.0" fx:id="Grade2"/>
-      <TextField layoutX="533.0" layoutY="170.0" prefHeight="23.0" prefWidth="48.0" fx:id="Grade3"/>
-      <TextField layoutX="533.0" layoutY="226.0" prefHeight="23.0" prefWidth="48.0" fx:id="Grade4"/>
-      <TextField layoutX="533.0" layoutY="283.0" prefHeight="23.0" prefWidth="48.0" fx:id="Grade5"/>
-      <Button layoutX="111.0" layoutY="306.0" mnemonicParsing="false" text="下一轮" textFill="#4c8444" onAction="#next">
+      <TextField fx:id="Grade1" layoutX="533.0" layoutY="61.0" prefHeight="23.0" prefWidth="48.0" />
+      <TextField fx:id="Grade2" layoutX="534.0" layoutY="116.0" prefHeight="23.0" prefWidth="48.0" />
+      <TextField fx:id="Grade3" layoutX="533.0" layoutY="170.0" prefHeight="23.0" prefWidth="48.0" />
+      <TextField fx:id="Grade4" layoutX="533.0" layoutY="226.0" prefHeight="23.0" prefWidth="48.0" />
+      <TextField fx:id="Grade5" layoutX="533.0" layoutY="283.0" prefHeight="23.0" prefWidth="48.0" />
+      <Button layoutX="111.0" layoutY="306.0" mnemonicParsing="false" onAction="#next" text="下一轮" textFill="#4c8444">
          <font>
             <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="390.0" layoutY="332.0" mnemonicParsing="false" text="打分细则" textFill="#ed0bad" onAction="#inquiryRule">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
    </children>
