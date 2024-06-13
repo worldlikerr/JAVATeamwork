@@ -3,7 +3,6 @@ package work.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import work.MainAPP;
 import work.entity.Judges;
 import work.entity.Player;
 import work.entity.PlayerList;
@@ -37,12 +36,6 @@ public class MarkScene3 implements Initializable {
     private TextField Grade5;
     private int currentCompetitor;
 
-
-    //查看打分细则
-    @FXML
-    public void inquiryRule() throws Exception {
-        MainAPP.setRoot("view/Rule.fxml","比赛规则");
-    }
 
 
     //打分

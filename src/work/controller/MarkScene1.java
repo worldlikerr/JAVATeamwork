@@ -39,14 +39,6 @@ public class MarkScene1 implements Initializable
     private static List<Player> outPlayer=new ArrayList<>();
 
 
-    //查看打分细则
-    @FXML
-    public void inquiryRule() throws Exception {
-        MainAPP.setRoot("view/Rule.fxml","比赛规则");
-    }
-
-
-
     //打分
     @FXML
     public void mark()

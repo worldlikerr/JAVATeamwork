@@ -5,7 +5,8 @@ import javafx.fxml.FXML;
 import work.MainAPP;
 import work.entity.PlayerList;
 //主界面控制器
-public class MainScene {
+public class MainScene
+{
     //比赛进行阶段
     public static int gameStage;
     //区分验证界面的下一界面的值
@@ -34,7 +35,7 @@ public class MainScene {
     public void ToMarkScene(ActionEvent actionEvent) throws Exception {
         if (gameStage==1){
             MainScene.sceneIndex=0;
-            MainAPP.setRoot("view/ProveScene.fxml","验证界面");
+            MainAPP.setRoot("view/Rule.fxml","验证界面");
         }else{
 //            MainAPP.setRoot("view/MarkScene1.fxml","第一轮");
             MainAPP.toRemindScene("打分未开始");
