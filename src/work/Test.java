@@ -9,13 +9,12 @@ import javafx.stage.Stage;
 public class Test extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Pane pane= FXMLLoader.load(getClass().getResource("view/TestScene.fxml"));
+        Pane pane= FXMLLoader.load(getClass().getResource("view/MarkScene3.fxml"));
         Scene scene=new Scene(pane,500,500);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
     public static void main(String[] args) {
         launch(args);
-        System.out.println("gdtfg11");
     }
 }

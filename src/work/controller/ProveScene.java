@@ -16,7 +16,7 @@ public class ProveScene {
     public void confirm(ActionEvent actionEvent) throws Exception {
         if (Objects.equals(inputWord.getText(), password)){
             switch (MainScene.sceneIndex){
-                case 0->MainAPP.setRoot("view/MarkScene1.fxml","评分界面");
+                case 0->MainAPP.setRoot("view/Rule.fxml","评分界面");
                 case 1->MainAPP.setSpecialRoot("view/PlayerListScene.fxml","报名选手名单");
             }
         }

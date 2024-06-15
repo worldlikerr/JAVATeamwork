@@ -3,6 +3,7 @@ package work.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import work.MainAPP;
 import work.entity.Judges;
 import work.entity.Player;
 import work.entity.PlayerList;
@@ -35,6 +36,7 @@ public class MarkScene3 implements Initializable {
     @FXML
     private TextField Grade5;
     private int currentCompetitor;
+    public static boolean END=false;
 
 
 
@@ -120,9 +122,14 @@ public class MarkScene3 implements Initializable {
 
     //得出最终胜利者
     @FXML
-    public void getWinner()
-    {
+    public void getWinner() throws Exception {
         PlayerList.getInstance().getPlayerArrayList().sort(Comparator.comparing(Player::getGrade));
+
+        //结束评分
+        END=true;
+
+        //跳转到主界面
+        MainAPP.setRoot("view/MainScene.fxml","主界面");
 
     }
     //初始化
@@ -130,5 +137,7 @@ public class MarkScene3 implements Initializable {
     public void initialize(URL location, ResourceBundle resources)
     {
         currentCompetitor=1;
+
+        END=false;
     }
 }
