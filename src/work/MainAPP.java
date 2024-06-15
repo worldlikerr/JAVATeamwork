@@ -17,7 +17,8 @@ import java.util.Objects;
 public class MainAPP extends Application {
     public static Stage mainStage;
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws Exception
+    {
         mainStage=primaryStage;
         Pane root= FXMLLoader.load(getClass().getResource("view/MainScene.fxml"));
         Scene scene=new Scene(root,600,400);

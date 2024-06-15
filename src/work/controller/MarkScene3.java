@@ -42,7 +42,7 @@ public class MarkScene3 implements Initializable {
     @FXML
     public void mark()
     {
-        List<Integer> theGrade=new ArrayList<>();
+        List<Double> theGrade=new ArrayList<>();
         for(int i=1;i<=5;i++)
         {
             String[] temp=switch (i)   //读取五个框内的数据，然后赋值给对应的评委
@@ -53,19 +53,20 @@ public class MarkScene3 implements Initializable {
                 case 4->judgeFour.getText().split("[ ,，]");
                 default -> judgeFive.getText().split("[ ,，]");
             };
-            Judges.getJudgeList().get(i).setSingGrade(Integer.parseInt(temp[0]));
-            Judges.getJudgeList().get(i).setPerformGrade(Integer.parseInt(temp[1]));
-            Judges.getJudgeList().get(i).setFaceGrade(Integer.parseInt(temp[2]));
+            System.out.print(i);
+            Judges.getJudgeList().get(i-1).setSingGrade(Integer.parseInt(temp[0]));
+            Judges.getJudgeList().get(i-1).setPerformGrade(Integer.parseInt(temp[1]));
+            Judges.getJudgeList().get(i-1).setFaceGrade(Integer.parseInt(temp[2]));
             switch (i)
             {
-                case 1:Grade1.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
-                case 2:Grade2.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
-                case 3:Grade3.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
-                case 4:Grade4.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
-                case 5:Grade5.setText(STR."\{Judges.getJudgeList().get(i).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i).getSumGrade()); break;
+                case 1:Grade1.setText(STR."\{Judges.getJudgeList().get(i-1).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i-1).getSumGrade()); break;
+                case 2:Grade2.setText(STR."\{Judges.getJudgeList().get(i-1).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i-1).getSumGrade()); break;
+                case 3:Grade3.setText(STR."\{Judges.getJudgeList().get(i-1).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i-1).getSumGrade()); break;
+                case 4:Grade4.setText(STR."\{Judges.getJudgeList().get(i-1).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i-1).getSumGrade()); break;
+                case 5:Grade5.setText(STR."\{Judges.getJudgeList().get(i-1).getSumGrade()}"); theGrade.add(Judges.getJudgeList().get(i-1).getSumGrade()); break;
             }
         }
-        theGrade.sort((a,b)->a-b);
+        theGrade.sort((a,b)-> (int) (a-b));
         //去掉最大值和最小值
         theGrade.removeFirst();
         theGrade.removeLast();
@@ -84,6 +85,7 @@ public class MarkScene3 implements Initializable {
     @FXML
     public void theFirst()
     {
+        clear();
         currentCompetitor=1;
         PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-1).getMusicShow().play();
     }
@@ -91,9 +93,27 @@ public class MarkScene3 implements Initializable {
     @FXML
     public void theSecond()
     {
+        clear();
         currentCompetitor=2;
         PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-2).getMusicShow().pause();
         PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-1).getMusicShow().play();
+    }
+
+
+
+    //清空打分框
+    public void clear()
+    {
+        judgeOne.clear();
+        judgeTwo.clear();
+        judgeThree.clear();
+        judgeFour.clear();
+        judgeFive.clear();
+        Grade1.clear();
+        Grade2.clear();
+        Grade3.clear();
+        Grade4.clear();
+        Grade5.clear();
     }
 
 

@@ -5,10 +5,9 @@ import java.time.LocalDate;
 public class Judge
 {
     private String name;
-    private int sumGrade;
-    private int singGrade;
-    private int performGrade;
-    private int faceGrade;
+    private double singGrade;
+    private double performGrade;
+    private double faceGrade;
     private String tip;
     private LocalDate judgeTime;
 
@@ -24,12 +23,12 @@ public class Judge
         this.name = name;
     }
 
-    public int getSumGrade() {
-        return (singGrade+performGrade+faceGrade)/3;
+    public double getSumGrade() {
+        return (singGrade+performGrade+faceGrade)/3.0;
     }
 
 
-    public int getSingGrade() {
+    public double getSingGrade() {
         return singGrade;
     }
 
@@ -37,7 +36,7 @@ public class Judge
         this.singGrade = singGrade;
     }
 
-    public int getPerformGrade() {
+    public double getPerformGrade() {
         return performGrade;
     }
 
@@ -45,7 +44,7 @@ public class Judge
         this.performGrade = performGrade;
     }
 
-    public int getFaceGrade() {
+    public double getFaceGrade() {
         return faceGrade;
     }
 
