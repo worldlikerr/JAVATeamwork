@@ -14,7 +14,8 @@ public class MainScene
 
     //初始化
     @FXML
-    private void initialize(){
+    private void initialize()
+    {
         gameStage=0;
         //判断此时是否报名截止
         if (PlayerList.getInstance().playerArrayList.size()==PlayerList.PLAYER_NUMBER)
