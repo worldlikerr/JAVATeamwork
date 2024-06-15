@@ -131,7 +131,7 @@ public class MarkScene2 implements Initializable {
             PlayerList.getInstance().getPlayerArrayList().remove(i);
         }
         outPlayer.sort(Comparator.comparing(Player::getGrade));
-        MainAPP.setRoot("/view/MarkScene3.fxml","决赛");
+        MainAPP.setRoot("view/MarkScene3.fxml","决赛");
     }
 
 
