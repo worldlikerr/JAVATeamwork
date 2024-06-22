@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import work.MainAPP;
 import work.entity.Player;
 
 import java.net.URL;
@@ -38,5 +39,10 @@ public class Result implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         id.setCellValueFactory(new PropertyValueFactory<>("player_id"));
         music.setCellValueFactory(new PropertyValueFactory<>("music_name"));
+    }
+
+    @FXML
+    public void back() throws Exception {
+        MainAPP.setRoot("view/MainScene.fxml","主界面");
     }
 }

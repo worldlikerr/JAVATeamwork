@@ -4,40 +4,40 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.controller.Rule">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="anchor-pane-with-background" stylesheets="@../css/SceneBackGround.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.controller.Rule">
 
     <children>
-        <Label layoutX="36.0" layoutY="269.0" prefHeight="32.0" prefWidth="285.0" text="1.每一位评委在第一空中填下三项的成绩">
+        <Label layoutX="36.0" layoutY="269.0" prefHeight="32.0" prefWidth="285.0" text="1.每一位评委在第一空中填下三项的成绩" textFill="#f8c302">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-        <Label layoutX="36.0" layoutY="311.0" prefHeight="32.0" prefWidth="442.0" text="2.待五位评委都填完第一空后，按下打分，生成当前选手的总成绩">
+        <Label layoutX="36.0" layoutY="311.0" prefHeight="32.0" prefWidth="442.0" text="2.待五位评委都填完第一空后，按下打分，生成当前选手的总成绩" textFill="#f8c302">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-        <Label layoutX="253.0" layoutY="24.0" text="比赛细则">
+        <Label layoutX="253.0" layoutY="24.0" text="比赛细则" textFill="#f8c302">
             <font>
                 <Font name="System Bold Italic" size="14.0" />
             </font>
         </Label>
-        <Label layoutX="67.0" layoutY="60.0" prefHeight="19.0" prefWidth="81.0" text="一：比赛流程">
+        <Label layoutX="67.0" layoutY="60.0" prefHeight="19.0" prefWidth="81.0" text="一：比赛流程" textFill="#f8c302">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="36.0" layoutY="97.0" prefHeight="32.0" prefWidth="442.0" text="1.依次点击每一位选手，听取其唱的歌曲">
+        <Label layoutX="36.0" layoutY="97.0" prefHeight="32.0" prefWidth="442.0" text="1.依次点击每一位选手，听取其唱的歌曲" textFill="#f8c302">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-        <Label layoutX="36.0" layoutY="146.0" prefHeight="32.0" prefWidth="285.0" text="2.打完分后，点击下一轮">
+        <Label layoutX="36.0" layoutY="146.0" prefHeight="32.0" prefWidth="285.0" text="2.打完分后，点击下一轮" textFill="#f8c302">
             <font>
                 <Font name="System Bold Italic" size="15.0" />
             </font>
         </Label>
-        <Label layoutX="67.0" layoutY="235.0" prefHeight="19.0" prefWidth="81.0" text="二：打分细则">
+        <Label layoutX="67.0" layoutY="235.0" prefHeight="19.0" prefWidth="81.0" text="二：打分细则" textFill="#f8c302">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
@@ -52,7 +52,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="36.0" layoutY="351.0" prefHeight="15.0" prefWidth="420.0" text="3.本次比赛采取十分制">
+      <Label layoutX="36.0" layoutY="351.0" prefHeight="15.0" prefWidth="420.0" text="3.本次比赛采取十分制" textFill="#f8c302">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
