@@ -37,7 +37,9 @@ public class MarkScene1 implements Initializable
     private int currentCompetitor;
     //记录被淘汰的选手
     private static List<Player> outPlayer=new ArrayList<>();
-
+    public static List<Player> getOutPlayer() {
+        return outPlayer;
+    }
 
     //打分
     @FXML

@@ -38,7 +38,12 @@ public class MarkScene3 implements Initializable {
     private int currentCompetitor;
     public static boolean END=false;
 
+    //获取最终的选手
+    private static List<Player> outPlayer=new ArrayList<>();
 
+    public static List<Player> getOutPlayer() {
+        return outPlayer;
+    }
 
     //打分
     @FXML
@@ -101,8 +106,6 @@ public class MarkScene3 implements Initializable {
         PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-1).getMusicShow().play();
     }
 
-
-
     //清空打分框
     public void clear()
     {
@@ -122,9 +125,18 @@ public class MarkScene3 implements Initializable {
 
     //得出最终胜利者
     @FXML
-    public void getWinner() throws Exception {
+    public void getWinner() throws Exception
+    {
         PlayerList.getInstance().getPlayerArrayList().sort(Comparator.comparing(Player::getGrade));
-
+        clear();
+        PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-1).getMusicShow().pause();
+        PlayerList.getInstance().getPlayerArrayList().sort(Comparator.comparing(Player::getGrade));
+        for(int i=0;i<2;i++)
+        {
+            outPlayer.add(PlayerList.getInstance().getPlayerArrayList().get(i));
+            PlayerList.getInstance().getPlayerArrayList().remove(i);
+        }
+        outPlayer.sort(Comparator.comparing(Player::getGrade));
         //结束评分
         END=true;
 

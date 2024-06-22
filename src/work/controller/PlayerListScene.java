@@ -37,8 +37,11 @@ public class PlayerListScene {
         sort(s,b);
         update();
     }
-    private void sort(String s,boolean b){
-        switch (s){
+
+    private void sort(String s,boolean b)
+    {
+        switch (s)
+        {
             case "学号"->playerList.sortByID(b);
             case "学院"->playerList.sortByCollageName(b);
             case "报名时间"->playerList.sortByRegistrationTime(b);

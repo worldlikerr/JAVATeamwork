@@ -35,7 +35,9 @@ public class MarkScene2 implements Initializable {
     private int currentCompetitor;
     //记录被淘汰的选手
     private static List<Player> outPlayer=new ArrayList<>();
-
+    public static List<Player> getOutPlayer() {
+        return outPlayer;
+    }
 
 
     //打分
@@ -115,7 +117,6 @@ public class MarkScene2 implements Initializable {
         PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-2).getMusicShow().pause();
         PlayerList.getInstance().getPlayerArrayList().get(currentCompetitor-1).getMusicShow().play();
     }
-
 
 
     //判断那些选手能晋级(下一轮）

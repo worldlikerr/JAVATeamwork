@@ -46,7 +46,8 @@ public class MainScene
     }
 
     //获取比赛结果
-    public void GetResult(ActionEvent actionEvent) {
+    public void GetResult(ActionEvent actionEvent) throws Exception {
+        MainAPP.setRoot("view/ResultScene.fxml","比赛结果");
     }
 
     public void ToPlayerListScene(ActionEvent actionEvent) throws Exception {

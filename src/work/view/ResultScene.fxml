@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="work.view.ResultScene"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="work.controller.Result">
+   <children>
+      <TableView fx:id="playerTableView" layoutX="117.0" layoutY="87.0" prefHeight="290.0" prefWidth="366.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="130.33331298828125" text="学号" />
+          <TableColumn fx:id="name" prefWidth="92.33331298828125" text="姓名" />
+            <TableColumn fx:id="music" prefWidth="143.0" text="歌曲" />
+        </columns>
+      </TableView>
+      <Label layoutX="246.0" layoutY="23.0" prefHeight="39.0" prefWidth="122.0" text="比赛结果" textAlignment="CENTER" textFill="#f21616" wrapText="true">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

@@ -28,7 +28,8 @@ public class PlayerScene {
     private void initialize(){
         gender.getItems().addAll("男","女");
     }
-    public void confirm(ActionEvent actionEvent) {
+    public void confirm(ActionEvent actionEvent)
+    {
         try {
             Player player=new Player(name.getText(),
                     player_id.getText(),
