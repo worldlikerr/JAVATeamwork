@@ -2,6 +2,7 @@ package work.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -41,8 +42,7 @@ public class Result implements Initializable {
         music.setCellValueFactory(new PropertyValueFactory<>("music_name"));
     }
 
-    @FXML
-    public void back() throws Exception {
+    public void back(ActionEvent actionEvent) throws Exception {
         MainAPP.setRoot("view/MainScene.fxml","主界面");
     }
 }
