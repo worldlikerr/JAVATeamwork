@@ -20,6 +20,8 @@ public class MainScene
         //判断此时是否报名截止
         if (PlayerList.getInstance().playerArrayList.size()==PlayerList.PLAYER_NUMBER)
             gameStage=1;
+        else
+            gameStage=0;
         //判断此时是否打分截止
         if(MarkScene3.END)
             gameStage=2;
